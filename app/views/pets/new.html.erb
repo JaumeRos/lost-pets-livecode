@@ -1,0 +1,12 @@
+<div class="container pt-5">
+
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    <!-- Pet::SPECIES comes from the pet model -->
+    <%= f.input :species, collection: Pet::SPECIES %>
+    <%= f.input :location %>
+    <%= f.input :found_at %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
